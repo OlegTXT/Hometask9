@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% block title %}
+    Product Update
+{% endblock %}
+
+{% block content %}
+    <h1>Product Update</h1> <a href="{% url 'product_create' %}">Create Product</a> <a href="{% url 'product_list' %}">Home</a>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>update</button>
+    </form>
+{% endblock %}
